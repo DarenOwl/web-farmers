@@ -1,0 +1,118 @@
+.content {
+    width: 100%;
+}
+
+.controls {
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.controls button {    
+    width: 100%;
+    background-color: white;
+}
+
+#game {
+    width:100%;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    padding-top: 5%;
+    background: #3e2723;
+}
+
+#map {
+    width: 100%;
+    margin: 0 auto;
+    border-spacing: 0;
+    background: #3e2723;
+    border: 5px solid #3e2723;
+}
+
+#map tr td  {
+    background-size: cover;
+    position: relative;
+}
+
+#map .flag {
+    background-image: url(res/flags.png);
+}
+
+#map .seeds {
+    background-image: url(res/radish/seeds.png);
+}
+
+#map .sprouts {
+    background-image: url(res/radish/sprouts.png);
+}
+
+#map .young {
+    background-image: url(res/radish/young.png);
+}
+
+#map .middle {
+    background-image: url(res/radish/middle.png);
+}
+
+#map .ready {
+    background-image: url(res/radish/ready.png);
+}
+
+#map .flag {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    visibility: hidden;
+    position: absolute;
+    top: -20%;
+    left: 25%;
+}
+
+#game .villager {
+    display: block;
+    width: 16%;
+    position: absolute;
+}
+
+#game .villager.blicking {
+    animation-name: blicking;
+    animation-duration: 0.2s;
+	animation-iteration-count: infinite;
+}
+
+#game .compost {
+    display: block;
+    width: 10%;
+    margin: 0 auto;
+}
+
+#map .flag.active {
+    visibility: visible;
+    animation-name: floating;
+    animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(10%);	
+	}
+	50% {
+		transform: translateY(15%);	
+	}	
+	100% {
+		transform: translateY(10%);
+	}			
+}
+
+@keyframes blicking {
+	0% {
+        opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}	
+    100% {
+        opacity: 0;
+	}
+}
